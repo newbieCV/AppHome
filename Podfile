@@ -7,5 +7,7 @@ target 'AppHome' do
 
   # Pods for AppHome
   pod 'SnapKit', '~> 5.0.0'
+  pod 'LookinServer', :configurations => ['Debug']
+  pod 'AHComponents', :path => '~/Lib/AHComponents'
 
 end
