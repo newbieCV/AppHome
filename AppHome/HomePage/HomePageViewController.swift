@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AHComponents
 
 class HomePageViewController: RootViewController {
     let contentHeight = kScreen.height - CommonTools().tabBarHeight()
