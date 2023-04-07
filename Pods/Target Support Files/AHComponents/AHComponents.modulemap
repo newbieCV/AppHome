@@ -1,6 +1,0 @@
-framework module AHComponents {
-  umbrella header "AHComponents-umbrella.h"
-
-  export *
-  module * { export * }
-}

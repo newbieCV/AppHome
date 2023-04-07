@@ -17,8 +17,6 @@
 		2BD081ED29DD58B900BD48DD /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD081EC29DD58B900BD48DD /* RootTabBarController.swift */; };
 		2BD081F029DD590100BD48DD /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD081EF29DD590100BD48DD /* MineViewController.swift */; };
 		2BD081F329DD5B0500BD48DD /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD081F229DD5B0500BD48DD /* HomePageViewController.swift */; };
-		2BD081F529DD5D4C00BD48DD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD081F429DD5D4C00BD48DD /* RootViewController.swift */; };
-		2BD0995929DD6B1700BD48DD /* ImageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0995829DD6B1700BD48DD /* ImageTools.swift */; };
 		A5975E4F5E51ED730BCB2BF2 /* Pods_AppHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DAE4858BD20A871FF8912F /* Pods_AppHome.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +33,6 @@
 		2BD081EC29DD58B900BD48DD /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		2BD081EF29DD590100BD48DD /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		2BD081F229DD5B0500BD48DD /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		2BD081F429DD5D4C00BD48DD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		2BD0995829DD6B1700BD48DD /* ImageTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTools.swift; sourceTree = "<group>"; };
 		83E04A0D802B943F909D79D1 /* Pods-AppHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppHome.debug.xcconfig"; path = "Target Support Files/Pods-AppHome/Pods-AppHome.debug.xcconfig"; sourceTree = "<group>"; };
 		C8DAE4858BD20A871FF8912F /* Pods_AppHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4F6D757F9D189E7A78B70D /* Pods-AppHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppHome.release.xcconfig"; path = "Target Support Files/Pods-AppHome/Pods-AppHome.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +82,6 @@
 				1F3BA1EE29D9FA23009427E9 /* LaunchScreen.storyboard */,
 				1F3BA1F129D9FA23009427E9 /* Info.plist */,
 				2BD081EC29DD58B900BD48DD /* RootTabBarController.swift */,
-				2BD081F429DD5D4C00BD48DD /* RootViewController.swift */,
 			);
 			path = AppHome;
 			sourceTree = "<group>";
@@ -110,7 +105,6 @@
 		2BD0995729DD6AF500BD48DD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				2BD0995829DD6B1700BD48DD /* ImageTools.swift */,
 				1FE8580029DDBB9000B0247C /* CommonTools.swift */,
 			);
 			path = Tools;
@@ -144,7 +138,7 @@
 				1F3BA1DC29D9FA21009427E9 /* Sources */,
 				1F3BA1DD29D9FA21009427E9 /* Frameworks */,
 				1F3BA1DE29D9FA21009427E9 /* Resources */,
-				50D3403091701F5BAD4BE34A /* [CP] Embed Pods Frameworks */,
+				0F9EC45300F7D8B785701AE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,7 +196,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		50D3403091701F5BAD4BE34A /* [CP] Embed Pods Frameworks */ = {
+		0F9EC45300F7D8B785701AE8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,11 +246,9 @@
 				2BD081ED29DD58B900BD48DD /* RootTabBarController.swift in Sources */,
 				1FE8580129DDBB9000B0247C /* CommonTools.swift in Sources */,
 				2BD081F329DD5B0500BD48DD /* HomePageViewController.swift in Sources */,
-				2BD081F529DD5D4C00BD48DD /* RootViewController.swift in Sources */,
 				1F3BA1E429D9FA21009427E9 /* AppDelegate.swift in Sources */,
 				1F3BA1E629D9FA21009427E9 /* SceneDelegate.swift in Sources */,
 				2BD081F029DD590100BD48DD /* MineViewController.swift in Sources */,
-				2BD0995929DD6B1700BD48DD /* ImageTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

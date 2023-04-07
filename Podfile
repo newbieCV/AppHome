@@ -20,12 +20,5 @@ target 'AppHome' do
   pod 'AHComponents', :path => 'Lib/AHComponents'
   # DEBUG环境下查看视图层级
   pod 'LookinServer', :configurations => ['Debug']
-	
-# Rx
-  pod 'RxSwift', '~> 6.5.0'
-  pod 'RxCocoa', '~> 6.5.0'
-  # RxTest and RxBlocking make the most sense in the context of unit/integration tests
-  pod 'RxBlocking', '~> 6.5.0'
-  pod 'RxTest', '~> 6.5.0'
   
 end

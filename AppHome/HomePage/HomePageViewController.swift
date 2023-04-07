@@ -5,11 +5,9 @@
 //  Created by ByteDance on 2023/4/5.
 //
 
-import Foundation
-import UIKit
 import AHComponents
 
-class HomePageViewController: RootViewController {
+class HomePageViewController: AHViewController {
     let contentHeight = kScreen.height - CommonTools().tabBarHeight()
     
     override func viewDidLoad() {
