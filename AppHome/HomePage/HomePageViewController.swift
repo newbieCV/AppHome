@@ -8,7 +8,7 @@
 import AHComponents
 
 class HomePageViewController: AHViewController {
-    let contentHeight = kScreen.height - CommonTools().tabBarHeight()
+    let contentHeight = kScreen.height - 84
     
     override func viewDidLoad() {
         super.viewDidLoad()

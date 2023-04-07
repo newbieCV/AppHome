@@ -17,7 +17,7 @@ target 'AppHome' do
   # layout布局，OC使用Masonry
   pod 'SnapKit', '~> 5.6.0'
   # 自己封装的一些UI基础组件
-  pod 'AHComponents', :path => 'Lib/AHComponents'
+  pod 'AHComponents', :path => '../AHComponents'
   # DEBUG环境下查看视图层级
   pod 'LookinServer', :configurations => ['Debug']
   
