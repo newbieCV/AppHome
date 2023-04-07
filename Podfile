@@ -6,8 +6,26 @@ target 'AppHome' do
   use_frameworks!
 
   # Pods for AppHome
-  pod 'SnapKit', '~> 5.0.0'
-  pod 'LookinServer', :configurations => ['Debug']
-  pod 'AHComponents', :path => 'Lib/AHComponents'
+  
+# 数据层面
+  # 网络请求，OC使用AFNetworking
+  pod 'Alamofire', '~> 5.6.4'
+  # 数据解析
+  pod 'YYModel', '~> 1.0.4'
 
+# UI相关
+  # layout布局，OC使用Masonry
+  pod 'SnapKit', '~> 5.6.0'
+  # 自己封装的一些UI基础组件
+  pod 'AHComponents', :path => 'Lib/AHComponents'
+  # DEBUG环境下查看视图层级
+  pod 'LookinServer', :configurations => ['Debug']
+	
+# Rx
+  pod 'RxSwift', '~> 6.5.0'
+  pod 'RxCocoa', '~> 6.5.0'
+  # RxTest and RxBlocking make the most sense in the context of unit/integration tests
+  pod 'RxBlocking', '~> 6.5.0'
+  pod 'RxTest', '~> 6.5.0'
+  
 end
