@@ -15,11 +15,11 @@ class RootTabBarController: UITabBarController {
     
     func creatSubViewControllers() {
         let homeVC = HomePageViewController()
-        let homeImage = AHTools.tailorImage(image: UIImage(named: "home.png"), newSize: CGSize(width: 30, height: 30))
+        let homeImage = AHImageTools.tailorImage(image: UIImage(named: "home.png"), newSize: CGSize(width: 30, height: 30))
         homeVC.tabBarItem = UITabBarItem(title: "首页", image: homeImage, selectedImage: homeImage)
         
         let mineVC = MineViewController()
-        let mineImage = AHTools.tailorImage(image: UIImage(named: "mine.png"), newSize: CGSize(width: 30, height: 30))
+        let mineImage = AHImageTools.tailorImage(image: UIImage(named: "mine.png"), newSize: CGSize(width: 30, height: 30))
         mineVC.tabBarItem = UITabBarItem(title: "我的", image: mineImage, selectedImage: mineImage)
         
         let tabArray = [homeVC, mineVC]
