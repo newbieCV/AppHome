@@ -7,7 +7,7 @@
 
 import AHComponents
 
-class RootTabBarController: UITabBarController {
+class RootTabBarController: AHTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         creatSubViewControllers()
@@ -24,10 +24,5 @@ class RootTabBarController: UITabBarController {
         
         let tabArray = [homeVC, mineVC]
         viewControllers = tabArray
-        
-        tabBar.backgroundColor = UIColor(named: "tabBarBgColor")
-        tabBar.tintColor = .orange
-        // 设置文字颜色不跟随tintColor
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(named: "textColor") ?? .tintColor], for: .selected)
     }
 }
