@@ -16,13 +16,14 @@ class MineViewController: AHViewController {
         // 点击toast
         let btn = UIButton()
         btn.backgroundColor = .cyan
-        btn.frame = CGRect(origin: CGPoint(x: 0, y: 200), size: CGSize(width: 50, height: 50))
+        btn.setTitle("toast提示", for: .normal)
+        btn.frame = CGRect(origin: CGPoint(x: 0, y: 200), size: CGSize(width: 150, height: 50))
         btn.addTarget(self, action: #selector(clickBtn), for: .touchUpInside)
         view.addSubview(btn)
     }
     var count = 0
     @objc func clickBtn() {
-        AHToast.sharedManager().showText(text: "点击了toast提示按钮\(count)")
+        AHToast.sharedManager().showText(text: "点击了toast提示按钮\(count)", leftImageUrl: nil, duration: 3)
         count += 1
     }
 }
