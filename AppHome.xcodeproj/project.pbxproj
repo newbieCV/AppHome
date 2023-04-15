@@ -13,6 +13,7 @@
 		1F3BA1EB29D9FA21009427E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3BA1E929D9FA21009427E9 /* Main.storyboard */; };
 		1F3BA1ED29D9FA23009427E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3BA1EC29D9FA23009427E9 /* Assets.xcassets */; };
 		1F3BA1F029D9FA23009427E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3BA1EE29D9FA23009427E9 /* LaunchScreen.storyboard */; };
+		2BCA715E29EAC49200C034F8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA715D29EAC49200C034F8 /* NavigationController.swift */; };
 		2BD081ED29DD58B900BD48DD /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD081EC29DD58B900BD48DD /* RootTabBarController.swift */; };
 		2BD081F029DD590100BD48DD /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD081EF29DD590100BD48DD /* MineViewController.swift */; };
 		2BD081F329DD5B0500BD48DD /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD081F229DD5B0500BD48DD /* HomePageViewController.swift */; };
@@ -28,6 +29,7 @@
 		1F3BA1EC29D9FA23009427E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F3BA1EF29D9FA23009427E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F3BA1F129D9FA23009427E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BCA715D29EAC49200C034F8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		2BD081EC29DD58B900BD48DD /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		2BD081EF29DD590100BD48DD /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		2BD081F229DD5B0500BD48DD /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				2BD081EF29DD590100BD48DD /* MineViewController.swift */,
+				2BCA715D29EAC49200C034F8 /* NavigationController.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 				1F3BA1DD29D9FA21009427E9 /* Frameworks */,
 				1F3BA1DE29D9FA21009427E9 /* Resources */,
 				0F9EC45300F7D8B785701AE8 /* [CP] Embed Pods Frameworks */,
+				922B45C77AD34DAFE52ACF00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +206,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppHome/Pods-AppHome-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		922B45C77AD34DAFE52ACF00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppHome/Pods-AppHome-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppHome/Pods-AppHome-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppHome/Pods-AppHome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A48D3239CB3FC6DC9AD97EB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +257,7 @@
 				2BD081F329DD5B0500BD48DD /* HomePageViewController.swift in Sources */,
 				1F3BA1E429D9FA21009427E9 /* AppDelegate.swift in Sources */,
 				1F3BA1E629D9FA21009427E9 /* SceneDelegate.swift in Sources */,
+				2BCA715E29EAC49200C034F8 /* NavigationController.swift in Sources */,
 				2BD081F029DD590100BD48DD /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,20 +24,27 @@ target 'AppHome' do
   
   # Pods for AppHome
   
-  ## 数据层面
+## 数据层面
   # 网络请求，OC使用AFNetworking
   pod 'Alamofire', '~> 5.6.4'
   # 数据解析
   pod 'YYModel', '~> 1.0.4'
   # 图片下载 & 缓存图片
   pod 'Kingfisher', '~> 7.6.2'
-  #
-  ## UI相关
+  
+## UI相关
   # layout布局，OC使用Masonry
   pod 'SnapKit', '~> 5.6.0'
-  # 自己封装的一些UI基础组件
-  pod 'AHComponents', :path => '../AHComponents'
   # DEBUG环境下查看视图层级
   pod 'LookinServer', :configurations => ['Debug']
+  
+## 自定义控件
+  pod 'AHComponents', :path => '../AHComponents'
+  
+  ## 高德地图
+  pod 'AMap3DMap-NO-IDFA', '~> 8.1.0'
+  pod 'AMapSearch-NO-IDFA', '~> 8.1.0'
+  pod 'AMapLocation-NO-IDFA', '~> 2.8.0'
+  pod 'AMapFoundation-NO-IDFA', '~> 1.6.9'
   
 end
