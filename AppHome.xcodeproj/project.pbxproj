@@ -131,7 +131,6 @@
 				1F3BA1DD29D9FA21009427E9 /* Frameworks */,
 				1F3BA1DE29D9FA21009427E9 /* Resources */,
 				0F9EC45300F7D8B785701AE8 /* [CP] Embed Pods Frameworks */,
-				922B45C77AD34DAFE52ACF00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,23 +203,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppHome/Pods-AppHome-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		922B45C77AD34DAFE52ACF00 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppHome/Pods-AppHome-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppHome/Pods-AppHome-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppHome/Pods-AppHome-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A48D3239CB3FC6DC9AD97EB1 /* [CP] Check Pods Manifest.lock */ = {
@@ -409,8 +391,10 @@
 				DEVELOPMENT_TEAM = K89YU52N46;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppHome/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "高德地图定位服务";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "高德地图定位服务";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -439,8 +423,10 @@
 				DEVELOPMENT_TEAM = K89YU52N46;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppHome/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "高德地图定位服务";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "高德地图定位服务";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
