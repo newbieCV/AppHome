@@ -19,15 +19,6 @@ class MineViewController: AHViewController {
 //        nav.setMapData(coordinates: [chuzuwu, gongsi], descArrs: ["出租屋", "公司"])
 //        self.addChild(nav)
 //        view.addSubview(nav.view)
-        
-        // 音频播放器
-        let av = AudioPlayerController()
-        self.addChild(av)
-        view.addSubview(av.view)
-        
-        /// 上拉弹窗
-        let popView = loadBottomPopView(contentNormalHeight: 100, contentDetailHeight: kScreen.height - 200)
-        popView.backgroundColor = .cyan
     }
 }
 

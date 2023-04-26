@@ -73,6 +73,7 @@
 		1F3BA1E229D9FA21009427E9 /* AppHome */ = {
 			isa = PBXGroup;
 			children = (
+				2B8DAB3129F8122C004B3FF3 /* Audio */,
 				2BD081F129DD5AEA00BD48DD /* HomePage */,
 				2BD081EE29DD58DC00BD48DD /* Mine */,
 				1F3BA1E329D9FA21009427E9 /* AppDelegate.swift */,
@@ -85,6 +86,14 @@
 				2BD081EC29DD58B900BD48DD /* RootTabBarController.swift */,
 			);
 			path = AppHome;
+			sourceTree = "<group>";
+		};
+		2B8DAB3129F8122C004B3FF3 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				2B56B86A29F6F3C200F13DCB /* AudioPlayerController.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		2BD081EE29DD58DC00BD48DD /* Mine */ = {
@@ -100,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				2BD081F229DD5B0500BD48DD /* HomePageViewController.swift */,
-				2B56B86A29F6F3C200F13DCB /* AudioPlayerController.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";

@@ -13,8 +13,12 @@ class AudioPlayerController: AHViewController {
         super.viewDidLoad()
         
         view.addSubview(avatar)
-        view.addSubview(playBtn)
+        view.addSubview(playConfigView)
         configMusic()
+        
+        /// 上拉弹窗，使用时需要之后或单独将其置为顶层
+        let popView = loadBottomPopView(contentNormalHeight: 100, contentDetailHeight: kScreen.height - 200)
+        popView.addSubview(tableView)
     }
     
     private lazy var avatar: UIImageView = {
@@ -25,12 +29,14 @@ class AudioPlayerController: AHViewController {
         return view
     }()
     
-    private lazy var playBtn: UIButton = {
-        let btn = UIButton(frame: CGRect(origin: CGPoint(x: (kScreen.width - 60) / 2, y: kScreen.height - 300),
-                                         size: CGSize(width: 60, height: 60)))
-        btn.setImage(UIImage(named: "play"), for: .normal)
-        btn.addTarget(self, action: #selector(clickPlayBtn), for: .touchUpInside)
-        return btn
+    private lazy var playConfigView: AHPlayToolsView = {
+        let view = AHPlayToolsView()
+        view.frame = CGRect(origin: CGPoint(x: 0, y: kScreen.height - 300),
+                            size: CGSize(width: kScreen.width, height: 80))
+        view.clickPlay = {[weak self] flag in
+            self?.clickPlayBtn(flag)
+        }
+        return view
     }()
     
     private lazy var player: AHAudioPlayer = {
@@ -40,6 +46,12 @@ class AudioPlayerController: AHViewController {
         }
         return audio
     }()
+    
+    private lazy var tableView: AHTableView = {
+        let view = AHTableView(frame: CGRect(origin: CGPoint(x: 0, y: 0),
+                                             size: CGSize(width: kScreen.width, height: kScreen.height - 200)))
+        return view
+    }()
 }
 
 extension AudioPlayerController {
@@ -48,19 +60,15 @@ extension AudioPlayerController {
     }
     
     @objc
-    func clickPlayBtn() {
-        if !player.playStatus() {
-            // 当前没有播放，点击的是播放，显示的应该是暂停，播放声音
-            playBtn.setImage(UIImage(named: "pause"), for: .normal)
+    func clickPlayBtn(_ flag: Bool) {
+        if flag {
             player.play()
         } else {
-            playBtn.setImage(UIImage(named: "play"), for: .normal)
             player.pause()
         }
     }
     
     func stopPlay() {
-        playBtn.setImage(UIImage(named: "play"), for: .normal)
         player.stop()
     }
 }
