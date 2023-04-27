@@ -22,11 +22,15 @@ class RootTabBarController: AHTabBarController {
         let avImage = AHImageTools.tailorImage(image: UIImage(named: "mp3.png"), newSize: CGSize(width: 30, height: 30))
         avVC.tabBarItem = UITabBarItem(title: "音乐", image: avImage, selectedImage: avImage)
         
+        let mapVC = MapViewController()
+        let mapImage = AHImageTools.tailorImage(image: UIImage(named: "map.png"), newSize: CGSize(width: 30, height: 30))
+        mapVC.tabBarItem = UITabBarItem(title: "导航", image: mapImage, selectedImage: mapImage)
+        
         let mineVC = MineViewController()
         let mineImage = AHImageTools.tailorImage(image: UIImage(named: "mine.png"), newSize: CGSize(width: 30, height: 30))
         mineVC.tabBarItem = UITabBarItem(title: "我的", image: mineImage, selectedImage: mineImage)
         
-        let tabArray = [homeVC, avVC, mineVC]
+        let tabArray = [homeVC, avVC, mapVC, mineVC]
         viewControllers = tabArray
     }
 }

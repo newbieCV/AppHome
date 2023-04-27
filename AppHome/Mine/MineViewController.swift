@@ -6,7 +6,6 @@
 //
 
 import AHComponents
-import MapKit
 
 class MineViewController: AHViewController {
     override func viewDidLoad() {

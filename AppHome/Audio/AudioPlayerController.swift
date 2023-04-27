@@ -36,6 +36,12 @@ class AudioPlayerController: AHViewController {
         view.clickPlay = {[weak self] flag in
             self?.clickPlayBtn(flag)
         }
+        view.clickLast = {[weak self] in
+            self?.clickLast()
+        }
+        view.clickNext = {[weak self] in
+            self?.clickNext()
+        }
         return view
     }()
     
@@ -70,5 +76,17 @@ extension AudioPlayerController {
     
     func stopPlay() {
         player.stop()
+    }
+    
+    func clickLast() {
+        player.stop()
+        configMusic()
+        player.play()
+    }
+    
+    func clickNext() {
+        player.stop()
+        configMusic()
+        player.play()
     }
 }

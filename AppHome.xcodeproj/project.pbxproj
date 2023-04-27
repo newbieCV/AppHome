@@ -14,6 +14,7 @@
 		1F3BA1ED29D9FA23009427E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3BA1EC29D9FA23009427E9 /* Assets.xcassets */; };
 		1F3BA1F029D9FA23009427E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3BA1EE29D9FA23009427E9 /* LaunchScreen.storyboard */; };
 		2B56B86B29F6F3C200F13DCB /* AudioPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B56B86A29F6F3C200F13DCB /* AudioPlayerController.swift */; };
+		2B8D542429FA179F004B3FF3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D542329FA179F004B3FF3 /* MapViewController.swift */; };
 		2BCA715E29EAC49200C034F8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA715D29EAC49200C034F8 /* NavigationController.swift */; };
 		2BD081ED29DD58B900BD48DD /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD081EC29DD58B900BD48DD /* RootTabBarController.swift */; };
 		2BD081F029DD590100BD48DD /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD081EF29DD590100BD48DD /* MineViewController.swift */; };
@@ -31,6 +32,7 @@
 		1F3BA1EF29D9FA23009427E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F3BA1F129D9FA23009427E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B56B86A29F6F3C200F13DCB /* AudioPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerController.swift; sourceTree = "<group>"; };
+		2B8D542329FA179F004B3FF3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2BCA715D29EAC49200C034F8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		2BD081EC29DD58B900BD48DD /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		2BD081EF29DD590100BD48DD /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		1F3BA1E229D9FA21009427E9 /* AppHome */ = {
 			isa = PBXGroup;
 			children = (
+				2B8D542229FA1771004B3FF3 /* Map */,
 				2B8DAB3129F8122C004B3FF3 /* Audio */,
 				2BD081F129DD5AEA00BD48DD /* HomePage */,
 				2BD081EE29DD58DC00BD48DD /* Mine */,
@@ -88,6 +91,15 @@
 			path = AppHome;
 			sourceTree = "<group>";
 		};
+		2B8D542229FA1771004B3FF3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				2BCA715D29EAC49200C034F8 /* NavigationController.swift */,
+				2B8D542329FA179F004B3FF3 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		2B8DAB3129F8122C004B3FF3 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				2BD081EF29DD590100BD48DD /* MineViewController.swift */,
-				2BCA715D29EAC49200C034F8 /* NavigationController.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 				2B56B86B29F6F3C200F13DCB /* AudioPlayerController.swift in Sources */,
 				2BD081ED29DD58B900BD48DD /* RootTabBarController.swift in Sources */,
 				2BD081F329DD5B0500BD48DD /* HomePageViewController.swift in Sources */,
+				2B8D542429FA179F004B3FF3 /* MapViewController.swift in Sources */,
 				1F3BA1E429D9FA21009427E9 /* AppDelegate.swift in Sources */,
 				1F3BA1E629D9FA21009427E9 /* SceneDelegate.swift in Sources */,
 				2BCA715E29EAC49200C034F8 /* NavigationController.swift in Sources */,
