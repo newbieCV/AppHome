@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFAudio
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 后台播放
+        let session: AVAudioSession = AVAudioSession.sharedInstance()
+        try? session.setActive(true)
+        try? session.setCategory(AVAudioSession.Category.playback)
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+        
         return true
     }
 
