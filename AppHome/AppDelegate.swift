@@ -39,6 +39,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    // MARK: - 音乐播放器 监听后台行为
+    override func remoteControlReceived(with event: UIEvent?) {
+        if event?.type == UIEvent.EventType.remoteControl {
+            switch event?.subtype {
+            case .remoteControlPlay:
+                // 点击了播放按钮
+                break
+            case .remoteControlTogglePlayPause:
+                // 点击了暂停按钮
+                break
+            case .remoteControlNextTrack:
+                // 下一首
+                break
+            case .remoteControlPreviousTrack:
+                // 上一首
+                break
+            default:
+                return
+            }
+        }
+    }
 }
 
