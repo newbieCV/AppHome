@@ -47,8 +47,12 @@ class AudioPlayerController: AHViewController {
     
     private lazy var player: AHAudioPlayer = {
         let audio = AHAudioPlayer()
-        audio.playEndCallBack = {[weak self] _ in
+        audio.playEndCallBack = { [weak self] _ in
             self?.stopPlay()
+            self?.playConfigView.changePlayBtn(status: false)
+        }
+        audio.playTimeCallBack = { [weak self] curTime, duration in
+            self?.playConfigView.updateSlideProgress(curTime: curTime, duration: duration)
         }
         return audio
     }()
