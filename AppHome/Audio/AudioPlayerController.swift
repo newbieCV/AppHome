@@ -12,15 +12,41 @@ class AudioPlayerController: AHViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(avatar)
-        view.addSubview(playConfigView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(avatar)
+        scrollView.addSubview(playConfigView)
         configMusic()
+        scrollView.addSubview(lyricView)
         
-        /// 上拉弹窗，使用时需要之后或单独将其置为顶层
-        let popView = loadBottomPopView(contentNormalHeight: 100, contentDetailHeight: kScreen.height - 200)
-        popView.addSubview(tableView)
+        /// 上拉播放列表
+        tableView = loadBottomPopView(contentNormalHeight: 100, contentDetailHeight: kScreen.height - 200)
+        tableView?.delegate = self
+        tableView?.dataSource = self
     }
     
+    private var tableView: AHTableView?
+    
+    private var scrollView: AHScrollerView = {
+        let view = AHScrollerView(frame: CGRect(origin: .zero, size: CGSize(width: kScreen.width, height: kScreen.height)))
+        view.contentSize = CGSize(width: kScreen.width * 2, height: kScreen.height)
+        return view
+    }()
+    
+    /// 播放页
+    private lazy var playerView: AudioPlayerView = {
+        let view = AudioPlayerView(frame: CGRect(origin: CGPoint(x: 0, y: 0),
+                                        size: CGSize(width: kScreen.width, height: kScreen.height)))
+        return view
+    }()
+    
+    /// 歌词页
+    private lazy var lyricView: AudioPlayerLyricsView = {
+        let view = AudioPlayerLyricsView(frame: CGRect(origin: CGPoint(x: kScreen.width, y: 0),
+                                        size: CGSize(width: kScreen.width, height: kScreen.height)))
+        return view
+    }()
+    
+    /// 专辑大图
     private lazy var avatar: UIImageView = {
         let view = UIImageView(frame: CGRect(origin: CGPoint(x: (kScreen.width - 200) / 2, y: 200),
                                              size: CGSize(width: 200, height: 200)))
@@ -29,6 +55,7 @@ class AudioPlayerController: AHViewController {
         return view
     }()
     
+    /// 播放控制按钮 & 进度条
     private lazy var playConfigView: AHPlayToolsView = {
         let view = AHPlayToolsView()
         view.frame = CGRect(origin: CGPoint(x: 0, y: kScreen.height - 300),
@@ -45,6 +72,7 @@ class AudioPlayerController: AHViewController {
         return view
     }()
     
+    /// 播放器
     private lazy var player: AHAudioPlayer = {
         let audio = AHAudioPlayer()
         audio.playEndCallBack = { [weak self] _ in
@@ -56,14 +84,9 @@ class AudioPlayerController: AHViewController {
         }
         return audio
     }()
-    
-    private lazy var tableView: AHTableView = {
-        let view = AHTableView(frame: CGRect(origin: CGPoint(x: 0, y: 0),
-                                             size: CGSize(width: kScreen.width, height: kScreen.height - 200)))
-        return view
-    }()
 }
 
+// MARK: - 控制音乐播放
 extension AudioPlayerController {
     func configMusic() {
         player.configAudio(urlStr: "")
@@ -92,5 +115,18 @@ extension AudioPlayerController {
         player.stop()
         configMusic()
         player.play()
+    }
+}
+
+// MARK: - tableView
+extension AudioPlayerController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        30
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: kScreen.width, height: 40)))
+        cell.contentView.backgroundColor = indexPath.row % 2 > 0 ? .yellow : .blue
+        return cell
     }
 }
